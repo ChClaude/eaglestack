@@ -1,10 +1,22 @@
 {
   "name": "eaglestack",
   "version": "1.0.0",
-  "description": "this is the portfolio site for Claude Christ De-Tchambila",
-  "main": "index.js",
-  "repository": "https://github.com/ChClaude/eaglestack.git",
-  "author": "ChClaude",
-  "license": "MIT",
-  "private": null
+  "private": true,
+  "description": "Eaglestack",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
