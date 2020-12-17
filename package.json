@@ -1,0 +1,10 @@
+{
+  "name": "eaglestack",
+  "version": "1.0.0",
+  "description": "this is the portfolio site for Claude Christ De-Tchambila",
+  "main": "index.js",
+  "repository": "https://github.com/ChClaude/eaglestack.git",
+  "author": "ChClaude",
+  "license": "MIT",
+  "private": null
+}
