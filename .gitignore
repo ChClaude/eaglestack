@@ -35,5 +35,3 @@ yarn-error.log*
 
 .vscode/
 .idea/
-
-*.lock
