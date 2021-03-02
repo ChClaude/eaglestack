@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "format": "prettier --write \"pages/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"pages/**/*.{js,jsx,ts,tsx} components/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "postcss": "7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "sass": "^1.32.8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
