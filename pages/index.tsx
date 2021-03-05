@@ -2,6 +2,13 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faPhone, faMapMarkerAlt);
+
 const Home = () => (
   <Layout>
     <div className="grid grid-cols-2">

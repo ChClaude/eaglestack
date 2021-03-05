@@ -1,58 +1,73 @@
 import React from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
     <footer className="px-32 py-2 bg-gray-800 pt-8 pb-4 text-white">
-      <div className="flex justify-around mb-7">
+      <div className="flex justify-between mb-7">
         <div className="flex flex-col">
-          <h5>Team up with us</h5>
+          <h6 className="pb-2">Company Info</h6>
           <ul>
             <li>
               <Link href="/">
-                <a>Products</a>
+                <a className="py-2">Products</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Services</a>
+                <a className="py-2">Services</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Articles</a>
+                <a className="py-2">Articles</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Our Partners</a>
+                <a className="py-2">Our Partners</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Our team</a>
+                <a className="py-2">Our team</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Chat to us</a>
+                <a className="py-2">Chat to us</a>
               </Link>
             </li>
           </ul>
         </div>
-        <div>
-          <h5>Where to find us</h5>
+        <div className="w-44">
+          <h6 className="pb-2">Get in Touch</h6>
           <div className="flex justify-between">
-            <ul>
-              <li>Cape Town, South Africa</li>
-              <li>+27748954636</li>
+            <ul className="flex justify-between w-full py-2">
               <li>
-                <ul className="flex justify-between">
-                  <li>Facebook</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                  <li>LinkedIn</li>
-                </ul>
+                <FontAwesomeIcon
+                  icon={['fab', 'facebook']}
+                  className="text-4xl"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={['fab', 'instagram']}
+                  className="text-4xl"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={['fab', 'twitter']}
+                  className="text-4xl"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={['fab', 'linkedin']}
+                  className="text-4xl"
+                />
               </li>
             </ul>
           </div>
@@ -64,7 +79,7 @@ const Footer = () => {
         <span>&copy;2021 Eaglestack All Rights Reserved</span>
         <div>
           <Link href="/">
-            <a className="mr-2">Privacy</a>
+            <a className="mr-3">Privacy</a>
           </Link>
           <Link href="/">
             <a>Terms of use</a>
