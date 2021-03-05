@@ -23,7 +23,9 @@ const Home = () => (
         </Button>
       </div>
 
-      <div>Image</div>
+      <div className="bg-gray-500 flex justify-center items-center text-white text-2xl">
+        <div>Site under development</div>
+      </div>
     </div>
   </Layout>
 );
