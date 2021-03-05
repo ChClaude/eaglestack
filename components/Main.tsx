@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Main = ({ children }: Props) => {
-  return <main className="px-32 py-4">{children}</main>;
+  return <main className="px-32 pt-4 pb-20">{children}</main>;
 };
 
 export default Main;
