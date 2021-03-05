@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-32 py-2">
+    <header className="flex justify-between items-center px-32 py-3 mb-16 sticky top-0 bg-white">
       <div className="text-4xl font-black">
         <Link href="/">Eaglestack</Link>
       </div>
