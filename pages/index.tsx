@@ -11,14 +11,14 @@ library.add(fab, faPhone, faMapMarkerAlt);
 
 const Home = () => (
   <Layout>
-    <div className="grid grid-cols-2">
-      <div>
+    <div className="grid grid-cols-2 h-96">
+      <div className="flex flex-col justify-center">
         <h1 className="leading-tight mb-1">Eaglestack Software</h1>
         <p className="text-xl mb-3">
           Mordern and reliable software solutions that delivers value to your
           business
         </p>
-        <Button className="bg-blue-600 text-white hover:bg-blue-500">
+        <Button className="bg-blue-600 text-white hover:bg-blue-500 w-44 h-16">
           Explore
         </Button>
       </div>
