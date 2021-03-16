@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Button = ({ children, className }: Props) => {
-  let style = 'py-3 px-8 rounded-full';
+  let style = 'py-3 px-9 rounded-full shadow-2xl';
 
   style = className === undefined ? style : style.concat(' ').concat(className);
 
