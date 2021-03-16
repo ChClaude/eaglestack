@@ -26,16 +26,6 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/">
-                <a className="py-2">Our Partners</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a className="py-2">Our team</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
                 <a className="py-2">Chat to us</a>
               </Link>
             </li>
