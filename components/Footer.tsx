@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="px-32 py-2 bg-gray-800 pt-8 pb-4 text-white">
       <div className="flex justify-between mb-7">
         <div className="flex flex-col">
-          <h6 className="pb-2">Company Info</h6>
+          <h6 className="pb-2">Important Links</h6>
           <ul>
             <li>
               <Link href="/">
