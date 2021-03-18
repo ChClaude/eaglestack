@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from '../styles/Header.module.scss';
 
 const Header = () => {
   return (
@@ -9,30 +10,35 @@ const Header = () => {
       </div>
       <nav className="w-1/3">
         <ul className="flex justify-between">
-          <li>
+          <li className="relative">
             <Link href="/">
-              <a>Home</a>
+              <a className={styles.link}>Home</a>
             </Link>
+            <div className="bg-white h-1 absolute w-0 left-0 transition-all" />
           </li>
-          <li>
+          <li className="relative">
             <Link href="#">
-              <a>About</a>
+              <a className={styles.link}>About</a>
             </Link>
+            <div className="bg-white h-1 absolute w-0 left-0 transition-all" />
           </li>
-          <li>
+          <li className="relative">
             <Link href="#">
-              <a>Products</a>
+              <a className={styles.link}>Products</a>
             </Link>
+            <div className="bg-white h-1 absolute w-0 left-0 transition-all" />
           </li>
-          <li>
+          <li className="relative">
             <Link href="#">
-              <a>Services</a>
+              <a className={styles.link}>Services</a>
             </Link>
+            <div className="bg-white h-1 absolute w-0 left-0 transition-all" />
           </li>
-          <li>
+          <li className="relative">
             <Link href="#">
-              <a>Contact</a>
+              <a className={styles.link}>Contact</a>
             </Link>
+            <div className="bg-white h-1 absolute w-0 left-0 transition-all" />
           </li>
         </ul>
       </nav>
