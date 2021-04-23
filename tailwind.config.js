@@ -16,10 +16,6 @@ module.exports = {
       red: colors.red,
     },
     extend: {},
-    fontFamily: {
-      sans: ['PT Sans', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
   },
   variants: {
     extend: {},
