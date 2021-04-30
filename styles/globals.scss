@@ -35,6 +35,17 @@
   /* Safari, Android, iOS */
 }
 
+// :root {
+//   --eaglestack-black {
+//     color: #151a1e;
+//   }
+// }
+
+// for testing only, comment out when done testing
+// * {
+//   border: 1px solid red;
+// }
+
 body {
   font-family: Mulish;
 }
@@ -50,7 +61,7 @@ h6 {
 
 @layer base {
   body {
-    @apply text-base text-gray-800;
+    @apply text-base text-eaglestack-black;
   }
 
   h1 {
