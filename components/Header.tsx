@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+// import logo from '../assets/eaglestack-logo.jpg';
 
 const Header = () => {
   return (
@@ -15,27 +17,37 @@ const Header = () => {
             <ul className="flex justify-between">
               <li>
                 <Link href="/">
-                  <a className="flex h-full items-center px-3">Home</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Platform
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="#">
-                  <a className="flex h-full items-center px-3">About</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Pricing
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="#">
-                  <a className="flex h-full items-center px-3">Products</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Entreprise
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="#">
-                  <a className="flex h-full items-center px-3">Services</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Jamstack
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="#">
-                  <a className="flex h-full items-center px-3">Contact</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Blog
+                  </a>
                 </Link>
               </li>
               <li className="flex-grow"></li>
@@ -48,7 +60,9 @@ const Header = () => {
               </li>
               <li>
                 <Link href="#">
-                  <a className="flex h-full items-center px-3">Get in touch</a>
+                  <a className="flex h-full items-center px-3 hover:underline">
+                    Get in touch
+                  </a>
                 </Link>
               </li>
             </ul>
