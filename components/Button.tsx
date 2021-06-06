@@ -9,8 +9,9 @@ interface Props {
   href?: string;
 }
 
+// TODO:Add liquid animation like here --> https://www.youtube.com/watch?v=zvZ-HlzaBcY&list=RDCMUCvHKiUI75ytqUcN851fRR2w&index=1
 const Button = ({ children, className }: Props) => {
-  let style = 'py-3 px-9 rounded-full shadow-2xl';
+  let style = 'py-3 px-9 border-solid border-2 border-black rounded-md';
 
   style = className === undefined ? style : style.concat(' ').concat(className);
 
