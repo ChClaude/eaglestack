@@ -1,4 +1,5 @@
 import React from 'react';
+import buttonStyles from '../styles/Button.module.scss';
 
 interface Props {
   /** The children element(s) of the component */
@@ -9,9 +10,9 @@ interface Props {
   href?: string;
 }
 
-// TODO:Add liquid animation like here --> https://www.youtube.com/watch?v=zvZ-HlzaBcY&list=RDCMUCvHKiUI75ytqUcN851fRR2w&index=1
 const Button = ({ children, className }: Props) => {
-  let style = 'py-3 px-9 border-solid border-2 border-black rounded-md';
+  let style =
+    'py-3 px-9 border-solid border-2 border-black rounded-md hover:bg-black hover:text-white focus:outline-none';
 
   style = className === undefined ? style : style.concat(' ').concat(className);
 
