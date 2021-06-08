@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import Button from '../components/Button';
-import Meta from '../components/Meta';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
-import styles from '../styles/Home.module.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
@@ -32,7 +28,18 @@ const Home = () => (
             <li>
               <Button>Get Started</Button>
             </li>
-            <li className="ml-4">Questions? Talk to an expert</li>
+            <li className="ml-4 flex">
+              <Link href="#">
+                <a className="flex">
+                  <span className="underline  hover:no-underline">
+                    Questions? Talk to an expert
+                  </span>
+                  <span className="material-icons ml-1 text-blue-700 text-base">
+                    arrow_forward
+                  </span>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full">
