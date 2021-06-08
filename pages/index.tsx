@@ -13,7 +13,7 @@ library.add(fab, faPhone, faMapMarkerAlt);
 const Home = () => (
   <Layout>
     <section className="mx-44 h-auto">
-      <div className="flex justify-between  items-center mt-12">
+      <div className="flex justify-between items-center mt-12">
         <div>
           <h1 className="mb-4 w-40-em leading-normal">
             <div>Modern</div>
@@ -43,7 +43,7 @@ const Home = () => (
           </ul>
         </div>
         <div className="w-full">
-          <div className="w-full h-6 bg-red-700">Column</div>
+          <div className="w-full h-96 rounded-md shadow bg-white">Column</div>
         </div>
       </div>
     </section>
