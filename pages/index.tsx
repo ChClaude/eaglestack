@@ -43,7 +43,9 @@ const Home = () => (
           </ul>
         </div>
         <div className="w-full">
-          <div className="w-full h-96 rounded-md shadow bg-white">Column</div>
+          <div className="w-full h-96 rounded-md shadow bg-white">
+            This is site is still under development
+          </div>
         </div>
       </div>
     </section>
