@@ -26,7 +26,7 @@ const Home = () => (
           </p>
           <ul className="mt-6 flex items-center">
             <li>
-              <Button>Get Started</Button>
+              <Button dark>Get Started</Button>
             </li>
             <li className="ml-4 flex">
               <Link href="#">
