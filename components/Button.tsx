@@ -1,22 +1,91 @@
-import React from 'react';
+import * as React from 'react';
 import buttonStyles from '../styles/Button.module.scss';
 
-interface Props {
+type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
   /** The children element(s) of the component */
   children?: React.ReactNode;
-  /** Additionnal style for the component */
-  className?: string;
-  /** Specifies the button as a link  */
-  href?: string;
-}
+  /** Specifies the HTLM element to render */
+  as?: E;
+};
 
-const Button = ({ children, className }: Props) => {
-  let style =
-    'py-3 px-9 border-solid border-2 border-black rounded-md hover:bg-black hover:text-white focus:outline-none';
+type PrimaryButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
+  Omit<React.ComponentProps<E>, keyof ButtonOwnProps> & {
+    /** Indicate primary variant of the button */
+    primary: boolean;
+    /** Indicate secondary variant of the button */
+    secondary?: never;
+    /** Indicate dark variant of the button */
+    dark?: never;
+    /** Indicate light variant of the button */
+    light?: never;
+  };
 
-  style = className === undefined ? style : style.concat(' ').concat(className);
+type SecondaryButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
+  Omit<React.ComponentProps<E>, keyof ButtonOwnProps> & {
+    /** Indicate secondary variant of the button */
+    secondary: boolean;
+    /** Indicate primary variant of the button */
+    primary?: never;
+    /** Indicate dark variant of the button */
+    dark?: never;
+    /** Indicate light variant of the button */
+    light?: never;
+  };
 
-  return <button className={style}>{children}</button>;
+type DarkButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
+  Omit<React.ComponentProps<E>, keyof ButtonOwnProps> & {
+    /** Indicate dark variant of the button */
+    dark: boolean;
+    /** Indicate primary variant of the button */
+    primary?: never;
+    /** Indicate secondary variant of the button */
+    secondary?: never;
+    /** Indicate light variant of the button */
+    light?: never;
+  };
+
+type LightButtonProps<E extends React.ElementType> = ButtonOwnProps<E> &
+  Omit<React.ComponentProps<E>, keyof ButtonOwnProps> & {
+    /** Indicate light variant of the button */
+    light: boolean;
+    /** Indicate primary variant of the button */
+    primary?: never;
+    /** Indicate secondary variant of the button */
+    secondary?: never;
+    /** Indicate dark variant of the button */
+    dark?: never;
+  };
+
+type ButtonProps<E extends React.ElementType> =
+  | PrimaryButtonProps<E>
+  | SecondaryButtonProps<E>
+  | DarkButtonProps<E>
+  | LightButtonProps<E>;
+
+const createClassNames = (classes: { [key: string]: boolean }): string => {
+  // let classNames = '';
+  // for (const [key, value] of Object.entries(classes)) {
+  //   if (value) classNames += key + ' ';
+  // }
+  // return classNames.trim();
+
+  return 'py-3 px-9 border-solid border-2 border-black rounded-md hover:bg-black hover:text-white focus:outline-none';
+};
+
+const defaultElement = 'button';
+
+const Button = <E extends React.ElementType = typeof defaultElement>({
+  children,
+  primary = false,
+  secondary = false,
+  dark = false,
+  light = false,
+  as,
+}: ButtonProps<E>) => {
+  const classNames = createClassNames({ primary, secondary, dark, light });
+  const TagName = as || defaultElement;
+
+  return <TagName className={classNames}>{children}</TagName>;
 };
 
 export default Button;
