@@ -9,8 +9,8 @@ export const EcommerceSite = () => {
           <Image
             src="/assets/icons8-sneakers-64.png"
             alt="Shoe Logo"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
           />
         </div>
         <div className={styles.menu}>
