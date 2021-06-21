@@ -69,7 +69,7 @@ const createClassNames = (classes: { [key: string]: boolean }): string => {
   // }
   // return classNames.trim();
 
-  return 'py-3 px-9 border-solid border-2 border-black rounded-md hover:bg-black hover:text-white focus:outline-none';
+  return 'py-3 px-9 border-solid border-2 border-dark rounded-md hover:bg-dark hover:text-white focus:outline-none';
 };
 
 const defaultElement = 'button';

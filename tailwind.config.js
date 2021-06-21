@@ -15,6 +15,10 @@ module.exports = {
       green: colors.green,
       yellow: colors.yellow,
       red: colors.red,
+      primary: 'var(--color-primary)',
+      secondary: 'var(--color-secondary)',
+      light: 'var(--color-light)',
+      dark: 'var(--color-dark)',
       'eaglestack-black': '#151A1E',
     },
     fontFamily: {

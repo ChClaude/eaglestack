@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=PT+Sans&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --color-primary: #1d4ed8;
+  --color-secondary: #fde047;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+}
 
 /* mulish - latin */
 @font-face {
@@ -58,12 +59,6 @@
       format('svg'); /* Legacy iOS */
 }
 
-// :root {
-//   --eaglestack-black {
-//     color: #151a1e;
-//   }
-// }
-
 // for testing only, comment out when done testing
 // * {
 //   border: 1px solid red;
@@ -115,3 +110,7 @@ h6 {
     @apply text-base font-header-regular;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
