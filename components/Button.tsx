@@ -73,7 +73,7 @@ const createClassNames = (
   for (const [key, value] of Object.entries(classes)) {
     if (value) {
       if (variant === 'outlined') {
-        classNames += ` border-solid border-2 border-${key} hover:bg-${key} hover:text-white`;
+        classNames += ` border-solid border-2 border-${key} text-${key} hover:bg-${key} hover:text-white`;
       } else if (variant === 'contained') {
         classNames += ` border-solid border-2 border-${key} bg-${key} text-white hover:bg-light hover:text-dark`;
       }

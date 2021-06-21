@@ -1,0 +1,45 @@
+.root {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 100%;
+  height: auto;
+  // background-color: #259542;
+  overflow: hidden;
+  margin-top: 1rem;
+  @extend .container;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  & > div {
+    position: relative;
+    bottom: 25%;
+  }
+}
+
+.menu {
+  // background-color: #851512;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuItem {
+  width: 20%;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #454545;
+}
+
+.container {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
