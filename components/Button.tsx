@@ -1,10 +1,12 @@
 import * as React from 'react';
-import buttonStyles from '../styles/Button.module.scss';
+import buttonStyles from '@/styles/Button.module.scss';
 
 type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
   /** The children element(s) of the component */
   children?: React.ReactNode;
-  /** Specifies the HTLM element to render */
+  /** Specifies the compnent variant to render */
+  variant?: 'contained' | 'outlined';
+  /** Specifies the HTML element to render */
   as?: E;
 };
 
@@ -62,14 +64,23 @@ type ButtonProps<E extends React.ElementType> =
   | DarkButtonProps<E>
   | LightButtonProps<E>;
 
-const createClassNames = (classes: { [key: string]: boolean }): string => {
-  // let classNames = '';
-  // for (const [key, value] of Object.entries(classes)) {
-  //   if (value) classNames += key + ' ';
-  // }
-  // return classNames.trim();
+const createClassNames = (
+  classes: { [key: string]: boolean },
+  variant: 'contained' | 'outlined' | undefined,
+): string => {
+  let classNames = 'py-3 px-9 rounded-md focus:outline-none';
 
-  return 'py-3 px-9 border-solid border-2 border-black rounded-md hover:bg-black hover:text-white focus:outline-none';
+  for (const [key, value] of Object.entries(classes)) {
+    if (value) {
+      if (variant === 'outlined') {
+        classNames += ` border-solid border-2 border-${key} text-${key} hover:bg-${key} hover:text-white`;
+      } else if (variant === 'contained') {
+        classNames += ` border-solid border-2 border-${key} bg-${key} text-white hover:bg-light hover:text-dark`;
+      }
+    }
+  }
+
+  return classNames.trim();
 };
 
 const defaultElement = 'button';
@@ -80,9 +91,13 @@ const Button = <E extends React.ElementType = typeof defaultElement>({
   secondary = false,
   dark = false,
   light = false,
+  variant,
   as,
 }: ButtonProps<E>) => {
-  const classNames = createClassNames({ primary, secondary, dark, light });
+  const classNames = createClassNames(
+    { primary, secondary, dark, light },
+    variant,
+  );
   const TagName = as || defaultElement;
 
   return <TagName className={classNames}>{children}</TagName>;
