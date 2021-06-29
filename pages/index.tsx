@@ -1,24 +1,17 @@
 import Link from 'next/link';
-import Button from '../components/Button';
-import EcommerceSite from '../components/EcommerceSite';
-import Image from 'next/image';
+import Button from '@/components/Button';
+import EcommerceSite from '@/components/EcommerceSite';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import Layout from '../components/Layout';
-import image from 'next/image';
+import Layout from '@/components/Layout';
 
 library.add(fab, faPhone, faMapMarkerAlt);
 
 const Home = () => {
-  const slide = {
-    image: '/assets/web_design_site.jpg',
-    description: 'website design',
-  };
-
   return (
     <Layout>
       <section className="mx-44 h-auto">

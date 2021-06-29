@@ -1,5 +1,5 @@
 import * as React from 'react';
-import buttonStyles from '../styles/Button.module.scss';
+import buttonStyles from '@/styles/Button.module.scss';
 
 type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
   /** The children element(s) of the component */
