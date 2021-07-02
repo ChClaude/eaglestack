@@ -71,7 +71,8 @@
 .descriptionLine1 {
   width: 90%;
   height: 8px;
-  background-color: #454544;
+  background-color: #d6d3d1;
+  opacity: 0.6;
   border-radius: 8px;
   margin-bottom: 7px;
 }
@@ -79,7 +80,8 @@
 .descriptionLine2 {
   width: 68%;
   height: 8px;
-  background-color: #454544;
+  background-color: #d6d3d1;
+  opacity: 0.6;
   border-radius: 8px;
   margin-bottom: 7px;
 }
@@ -87,7 +89,8 @@
 .descriptionLine3 {
   width: 80%;
   height: 8px;
-  background-color: #454544;
+  background-color: #d6d3d1;
+  opacity: 0.6;
   border-radius: 8px;
 }
 
@@ -97,4 +100,20 @@
   height: 20px;
   border-radius: 50%;
   background-color: #333;
+}
+
+.itemColor:not(:last-child) {
+  margin-right: 4px;
+}
+
+.itemBlue {
+  background-color: #5591be;
+}
+
+.itemYellow {
+  background-color: #f9dfac;
+}
+
+.itemPink {
+  background-color: #fbe3eb;
 }

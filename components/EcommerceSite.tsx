@@ -26,33 +26,39 @@ export const EcommerceSite = () => {
         </div>
       </section>
       <section className={styles.gridContainer}>
-        <div>
-          <Image
-            src="/assets/ryan-plomp.jpg"
-            width={80}
-            height={80}
-            alt="ECommerce item for sale"
-            objectFit="cover"
-            className="rounded-md"
-          />
-          <Image
-            src="/assets/jade-scarlato-2.jpg"
-            width={80}
-            height={80}
-            alt="ECommerce item for sale"
-            objectFit="cover"
-            className="rounded-md mt-1"
-          />
-          <Image
-            src="/assets/jade-scarlato.jpg"
-            width={80}
-            height={80}
-            alt="ECommerce item for sale"
-            objectFit="fill"
-            className="rounded-md mt-1"
-          />
+        <div className="flex flex-col items-center">
+          <div className="mb-2">
+            <Image
+              src="/assets/ryan-plomp.jpg"
+              width={80}
+              height={80}
+              alt="ECommerce item for sale"
+              objectFit="cover"
+              className="rounded-md"
+            />
+          </div>
+          <div className="mb-2">
+            <Image
+              src="/assets/jade-scarlato-2.jpg"
+              width={80}
+              height={80}
+              alt="ECommerce item for sale"
+              objectFit="cover"
+              className="rounded-md"
+            />
+          </div>
+          <div>
+            <Image
+              src="/assets/jade-scarlato.jpg"
+              width={80}
+              height={80}
+              alt="ECommerce item for sale"
+              objectFit="fill"
+              className="rounded-md"
+            />
+          </div>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden ml-1">
           <Image
             src="/assets/ryan-plomp.jpg"
             width={400}
@@ -62,26 +68,25 @@ export const EcommerceSite = () => {
             className="rounded-lg"
           />
         </div>
-        <div>
+        <div className="ml-3">
           <div className={styles.itemHeader}>Limited-edition sneakers</div>
-          <div>
-            <span className="material-icons">star</span>
-            <span className="material-icons">star</span>
-            <span className="material-icons">star</span>
-            <span className="material-icons">star</span>
-            <span className="material-icons">star</span>
+          <div className="mt-2">
+            <span className="material-icons text-yellow-500">star</span>
+            <span className="material-icons text-yellow-500">star</span>
+            <span className="material-icons text-yellow-500">star</span>
+            <span className="material-icons text-yellow-500">star</span>
+            <span className="material-icons text-gray-300">star</span>
           </div>
-          <div>
+          <div className="mt-3">
             <div className={styles.descriptionLine1}></div>
             <div className={styles.descriptionLine2}></div>
             <div className={styles.descriptionLine3}></div>
           </div>
-          <div>$197.95</div>
-          <div>
-            <span className={styles.itemColor}></span>
-            <span className={styles.itemColor}></span>
-            <span className={styles.itemColor}></span>
-            <span className={styles.itemColor}></span>
+          <div className="mt-4 text-2xl">$197.95</div>
+          <div className="mt-3">
+            <span className={`${styles.itemColor} ${styles.itemBlue}`}></span>
+            <span className={`${styles.itemColor} ${styles.itemYellow}`}></span>
+            <span className={`${styles.itemColor} ${styles.itemPink}`}></span>
           </div>
         </div>
       </section>
