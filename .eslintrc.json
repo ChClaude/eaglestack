@@ -9,12 +9,32 @@
   "rules": {
     "react/prop-types": 0,
     "import/no-unresolved": "off",
+    "import/extensions": [
+      "off",
+      "always",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "jsx-a11y/anchor-is-valid": "off",
     "react-hooks/rules-of-hooks": "error",
-    "no-console": "warn"
+    "no-console": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ]
   },
-  "parser": "babel-eslint",
-  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -30,6 +50,12 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
     }
   }
 }
