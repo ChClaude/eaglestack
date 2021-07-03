@@ -63,10 +63,14 @@
       format('svg'); /* Legacy iOS */
 }
 
-// for testing only, comment out when done testing
-// * {
-//   border: 1px solid red;
-// }
+* {
+  // border: 1px solid red;
+  transition: font-size 0.5s cubic-bezier(0.76, 0.18, 0.83, 0.67) 0.4s;
+}
+
+html {
+  font-size: 14px;
+}
 
 body {
   @apply font-body;
@@ -114,5 +118,12 @@ h6 {
 
   p {
     @apply text-base font-header-regular;
+  }
+}
+
+// Media queries
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
   }
 }
