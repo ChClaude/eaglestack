@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
-    <footer className="px-32 py-2 bg-gray-800 pt-8 pb-4 text-white mt-16">
-      <div className="flex justify-between mb-7">
+    <footer className="py-2 bg-gray-800 pt-8 pb-4 text-white mt-16 px-4 sm:px-44">
+      <div className="flex flex-col mb-7 sm:justify-between sm:flex-row">
         <div className="flex flex-col">
-          <h6 className="pb-2">Important Links</h6>
+          <h6 className="mb-1">Important Links</h6>
           <ul>
             <li>
               <Link href="/">
@@ -31,8 +31,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-44">
-          <h6 className="pb-2">Get in Touch</h6>
+        <div className="w-44 mt-4 sm:mt-0">
+          <h6 className="mb-1">Get in Touch</h6>
           <div className="flex justify-between">
             <ul className="flex justify-between w-full py-2">
               <li>
@@ -65,14 +65,14 @@ const Footer = () => {
       </div>
 
       <hr />
-      <div className="flex mt-2 px-2 justify-between">
+      <div className="flex mt-2 px-2 flex-col items-center sm:items-start sm:justify-between sm:flex-row">
         <span>&copy;2021 Eaglestack All Rights Reserved</span>
-        <div>
+        <div className="flex flex-col sm:flex-row">
           <Link href="/">
             <a className="mr-3">Privacy</a>
           </Link>
           <Link href="/">
-            <a>Terms of use</a>
+            <a>Terms</a>
           </Link>
         </div>
       </div>

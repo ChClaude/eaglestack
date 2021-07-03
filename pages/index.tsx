@@ -22,9 +22,10 @@ const Home = () => {
               <div>web apps</div>
               <div>built faster</div>
             </h1>
-            <p className="text-2xl w-80-em font-serif">
-              An intuitive Git-based workflow and powerful serverless platform
-              to build, deploy, and collaborate on web apps
+            <p className="text-2xl w-80-em font-serif text-justify">
+              Everything you need to build and boost your online presence.
+              Proving solutions for ecoomerce sites, web and mobile apps, AI
+              powered web tools to meet your business needs.
             </p>
             <ul className="mt-6 flex items-center">
               <li>
