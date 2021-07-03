@@ -32,7 +32,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="w-full mt-4 sm:mt-0 sm:w-44">
-          <h6 className="mb-1 text-center">Get in Touch</h6>
+          <h6 className="mb-1 text-center sm:text-left">Get in Touch</h6>
           <div className="flex justify-between">
             <ul className="flex justify-center w-full py-2 sm:justify-between">
               <li className="mr-3 sm:mr-0">
