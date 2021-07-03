@@ -14,29 +14,35 @@ library.add(fab, faPhone, faMapMarkerAlt);
 const Home = () => {
   return (
     <Layout>
-      <section className="mx-44 h-auto">
-        <div className="flex justify-between items-center mt-12">
-          <div>
-            <h1 className="mb-4 w-40-em leading-normal">
-              <div>Modern</div>
-              <div>web apps</div>
-              <div>built faster</div>
+      <section className="px-4 h-auto overflow-hidden sm:px-44">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+          <div className="flex flex-col justify-center mb-10 sm:justify-start sm:mb-0">
+            <h1 className="mb-4 leading-normal w-full sm:w-40-em">
+              <div className="whitespace-nowrap text-center sm:text-left">
+                Modern
+              </div>
+              <div className="whitespace-nowrap text-center sm:text-left">
+                web apps
+              </div>
+              <div className="whitespace-nowrap text-center sm:text-left">
+                built faster
+              </div>
             </h1>
-            <p className="text-2xl w-80-em font-serif text-justify">
+            <p className="text-2xl font-serif text-center sm:w-80-em sm:text-justify">
               Everything you need to build and boost your online presence.
-              Proving solutions for ecoomerce sites, web and mobile apps, AI
+              Providing solutions for ecoomerce sites, web and mobile apps, AI
               powered web tools to meet your business needs.
             </p>
-            <ul className="mt-6 flex items-center">
+            <ul className="mt-6 flex flex-col items-center sm:flex-row">
               <li>
                 <Button variant="outlined" dark>
                   Get Started
                 </Button>
               </li>
-              <li className="ml-4 flex">
+              <li className="flex mt-4 sm:mt-0 sm:ml-4">
                 <Link href="#">
                   <a className="flex">
-                    <span className="underline  hover:no-underline">
+                    <span className="underline hover:no-underline">
                       Questions? Talk to an expert
                     </span>
                     <span className="material-icons ml-1 text-blue-700 text-base">
