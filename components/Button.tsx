@@ -84,6 +84,7 @@ const createClassNames = (
 
 const defaultElement = 'button';
 
+// TODO: This is not rendering as expect in production
 const Button = <E extends React.ElementType = typeof defaultElement>({
   children,
   primary = false,
