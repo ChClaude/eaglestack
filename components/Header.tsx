@@ -24,8 +24,6 @@ const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleOnClick = () => {
-    console.log('cross');
-
     if (isOpen) {
       setClassBar1(styles.bar1);
       setClassBar2(styles.bar2);
