@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/styles/Header.module.scss';
 
 const Logo = () => (
   <div className="flex w-36 overflow-hidden">
@@ -16,9 +17,40 @@ const Logo = () => (
   </div>
 );
 
+const HamburgerMenu = () => {
+  const [classBar1, setClassBar1] = React.useState(styles.bar1);
+  const [classBar2, setClassBar2] = React.useState(styles.bar2);
+  const [classBar3, setClassBar3] = React.useState(styles.bar3);
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleOnClick = () => {
+    console.log('cross');
+
+    if (isOpen) {
+      setClassBar1(styles.bar1);
+      setClassBar2(styles.bar2);
+      setClassBar3(styles.bar3);
+    } else {
+      setClassBar1(styles.barCross1);
+      setClassBar2(styles.barCross2);
+      setClassBar3(styles.barCross3);
+    }
+
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <button className={styles.barContainer} onClick={handleOnClick}>
+      <span className={classBar1}></span>
+      <span className={classBar2}></span>
+      <span className={classBar3}></span>
+    </button>
+  );
+};
+
 const Header = () => {
   return (
-    <header className="mb-4 w-full">
+    <header className="mb-4 w-full overflow-hidden">
       <div className="flex items-end py-4 px-4 md:px-44">
         <Link href="/">
           <a className="mr-8 relative top-px">
@@ -79,6 +111,10 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+
+        <div className="ml-auto md:hidden">
+          <HamburgerMenu />
+        </div>
       </div>
     </header>
   );
