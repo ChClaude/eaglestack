@@ -35,7 +35,7 @@ const Home = () => {
             </p>
             <ul className="mt-6 flex flex-col items-center sm:flex-row">
               <li>
-                <Button variant="outlined" dark>
+                <Button variant="contained" dark>
                   Get Started
                 </Button>
               </li>
