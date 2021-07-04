@@ -1,3 +1,6 @@
+// $ecommerce-color-primary: #1d4ed8;
+$ecommerce-color-primary: #3498db;
+
 @mixin horizontal-padding {
   padding-left: 1.8rem;
   padding-right: 1.8rem;
@@ -40,14 +43,14 @@
   width: 20%;
   height: 10px;
   border-radius: 30px;
-  background-color: #3498db;
+  background-color: $ecommerce-color-primary;
 }
 
 .cartContainer {
   span {
     position: relative;
     top: 2px;
-    color: #3498db;
+    color: $ecommerce-color-primary;
   }
 }
 

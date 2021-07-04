@@ -19,13 +19,13 @@ const Logo = () => (
 const Header = () => {
   return (
     <header className="mb-4 w-full">
-      <div className="flex items-end py-4 px-4 sm:px-44">
+      <div className="flex items-end py-4 px-4 md:px-44">
         <Link href="/">
           <a className="mr-8 relative top-px">
             <Logo />
           </a>
         </Link>
-        <nav className="w-full hidden sm:inline-block">
+        <nav className="w-full hidden md:inline-block">
           <ul className="flex justify-between">
             <li>
               <Link href="/">

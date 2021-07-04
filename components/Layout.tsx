@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProp) => {
     <>
       <Meta title="We build modern and reliable software solutions" />
       <Header />
-      <main className="mt-8 sm:mt-12">{children}</main>
+      <main className="mt-8 md:mt-12">{children}</main>
       <Footer />
     </>
   );
