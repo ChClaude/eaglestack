@@ -109,7 +109,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
         <div className="ml-auto md:hidden">
           <HamburgerMenu />
         </div>
