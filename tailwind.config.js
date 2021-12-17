@@ -41,6 +41,9 @@ module.exports = {
         '60-em': '15em',
         '80-em': '20em',
       },
+      boxShadow: {
+        'button': '10px 7px 26px -5px rgba(0,0,0,0.76)',
+      }
     },
   },
   variants: {

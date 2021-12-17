@@ -136,12 +136,8 @@ const Button = <E extends React.ElementType = typeof defaultElement>({
   const [left, setLeft] = React.useState(0);
 
   const runRippleEffect = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log('run ripple effect');
     const x = event.pageX;
     const y = event.pageY;
-
-    console.log(event);
-    console.log(event.target);
 
     const buttonTop = event.target.offsetTop;
     const buttonLeft = event.target.offsetLeft;

@@ -43,7 +43,7 @@ const Home = () => {
               <li className='flex mt-4 md:mt-0 md:ml-4'>
                 <Link href='#'>
                   <a className='flex'>
-                    <span className="hover:underline">
+                    <span className="underline decoration-primary hover:decoration-black">
                       Questions? Talk to an expert
                     </span>
                     <span className="material-icons ml-1 text-blue-700 text-base">
