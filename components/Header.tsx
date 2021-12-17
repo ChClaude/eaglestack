@@ -39,16 +39,16 @@ const HamburgerMenu = () => {
 
   return (
     <button className={styles.barContainer} onClick={handleOnClick}>
-      <span className={classBar1}></span>
-      <span className={classBar2}></span>
-      <span className={classBar3}></span>
+      <span className={classBar1}/>
+      <span className={classBar2}/>
+      <span className={classBar3}/>
     </button>
   );
 };
 
 const Header = () => {
   return (
-    <header className="mb-4 w-full overflow-hidden">
+    <header className="bg-blue-50 w-full overflow-hidden">
       <div className="flex items-end py-4 px-4 md:px-44">
         <Link href="/">
           <a className="mr-8 relative top-px">

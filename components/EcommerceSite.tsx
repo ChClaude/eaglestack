@@ -17,9 +17,9 @@ export const EcommerceSite = () => {
           />
         </div>
         <div className={styles.menu}>
-          <div className={styles.menuItem}></div>
-          <div className={styles.menuItem}></div>
-          <div className={styles.menuItem}></div>
+          <div className={styles.menuItem}/>
+          <div className={styles.menuItem}/>
+          <div className={styles.menuItem}/>
           <div className={styles.cartContainer}>
             <span className="material-icons">shopping_cart</span>
           </div>

@@ -84,13 +84,13 @@ const switchButtonClassesVariant = (
   } else if (variant === 'contained') {
     switch (key) {
       case 'primary':
-        return ' border-primary bg-primary text-white hover:bg-light hover:text-primary';
+        return ' border-primary bg-primary text-white';
       case 'secondary':
-        return ' border-secondary bg-secondary text-white hover:bg-light hover:text-secondary';
+        return ' border-secondary bg-secondary text-white';
       case 'light':
-        return ' border-light bg-light text-dark hover:bg-dark hover:text-white';
+        return ' border-light bg-light text-dark';
       case 'dark':
-        return ' border-dark bg-dark text-white hover:bg-light hover:text-dark';
+        return ' border-dark bg-dark text-white';
     }
   }
 };
@@ -104,9 +104,9 @@ const createClassNames = (
   for (const [key, value] of Object.entries(classes)) {
     if (value) {
       if (variant === 'outlined') {
-        classNames += ` border-solid border-2 hover:text-white`;
+        classNames += ` border-solid border-2`;
       } else if (variant === 'contained') {
-        classNames += ` border-solid border-2 hover:bg-light `;
+        classNames += ` border-solid border-2`;
       }
 
       classNames += switchButtonClassesVariant(key, variant);

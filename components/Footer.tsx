@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
-    <footer className="py-2 bg-gray-800 pt-8 pb-4 text-white mt-16 px-4 md:px-44">
+    <footer className="py-2 bg-gray-800 pt-8 pb-4 text-white px-4 md:px-44">
       <div className="flex flex-col mb-7 md:justify-between md:flex-row">
         <div className="flex flex-col items-center md:items-start">
           <h6 className="mb-1">Important Links</h6>
