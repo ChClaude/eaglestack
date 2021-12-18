@@ -1,21 +1,20 @@
+import React from 'react';
 import Link from 'next/link';
-import Button from '@/components/core/Button';
-import EcommerceSite from '@/components/EcommerceSite';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import EcommerceSite from '@/components/EcommerceSite';
+import Button from '@/components/core/Button';
 import Layout from '@/components/Layout';
 import SVG from '@/components/SVG';
+import ClientListMarquee from '@/components/ClientListMarquee';
 
 library.add(fab, faPhone, faMapMarkerAlt);
 
 const Home = () => {
   return (
     <Layout>
-      <section className="px-4 h-auto bg-blue-50 overflow-hidden md:px-44 md:py-20">
+      <section className='px-4 h-auto bg-blue-50 overflow-hidden md:px-44 md:py-20'>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex flex-col justify-center mb-10 md:justify-start md:mb-0">
             <h1 className="mb-4 leading-normal w-full md:w-40-em">
@@ -54,17 +53,17 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full">
-            <div className="w-full h-96 rounded-lg shadow bg-white flex justify-center items-center">
+          <div className='w-full'>
+            <div className='w-full h-96 rounded-lg shadow bg-white flex justify-center items-center'>
               <EcommerceSite />
             </div>
           </div>
         </div>
-        <SVG/>
+        <SVG />
       </section>
-      <section className="md:px-44 md:py-20">
-        <h3>Build successful software solutions</h3>
-        <p>We&apos;ve worked on many software projects which include the following</p>
+      <section className='md:px-44 md:py-20'>
+        <h4 className='text-center mb-8'>Our Clients</h4>
+        <ClientListMarquee />
       </section>
     </Layout>
   );

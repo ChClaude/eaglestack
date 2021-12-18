@@ -1,5 +1,6 @@
 .ripple {
-  @apply overflow-hidden shadow-button;
+  @apply overflow-hidden shadow-lg hover:shadow-button;
+  transition: box-shadow 0.2s ease-out 0.1s;
 }
 
 .ripple .circle {
