@@ -139,8 +139,10 @@ const Button = <E extends React.ElementType = typeof defaultElement>({
     const x = event.pageX;
     const y = event.pageY;
 
-    const buttonTop = event.target.offsetTop;
-    const buttonLeft = event.target.offsetLeft;
+    // @ts-ignore
+		const buttonTop = event.target.offsetTop;
+		// @ts-ignore
+		const buttonLeft = event.target.offsetLeft;
 
 
     const xInside = x - buttonLeft;

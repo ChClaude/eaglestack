@@ -1,13 +1,21 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
-  ],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "next", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
-    "react/prop-types": 0,
+    "react/prop-types": "off",
+    "import/no-named-default": "off",
     "import/no-unresolved": "off",
     "import/extensions": [
       "off",
@@ -25,37 +33,15 @@
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
-  },
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "react",
-    "import",
-    "jsx-a11y",
-    "react-hooks",
-    "@typescript-eslint"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    },
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
-      }
-    }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-tabs": "off",
+		"no-plusplus": "off"
   }
 }

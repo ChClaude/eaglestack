@@ -1,42 +1,66 @@
 import * as React from 'react';
 import Ticker from 'react-ticker';
+import { number } from 'prop-types';
 
 
 const clients: { id: number, name: string, image: string }[] = [
-  { id: 1, name: 'CrazeEnvironmental', image: '' },
-  { id: 2, name: 'Agroelikia', image: '' },
-  { id: 3, name: 'HubStack', image: '' },
-  { id: 4, name: 'EcoMoja', image: '' },
+	{ id: 1, name: 'CrazeEnvironmental', image: '' },
+	{ id: 2, name: 'Agroelikia', image: '' },
+	{ id: 3, name: 'HubStack', image: '' },
+	{ id: 4, name: 'EcoMoja', image: '' },
 ];
 
-const Client = ({index}: {index: number}) => {
-  const [arrayIndex, setArrayIndex] = React.useState(0);
+const Client = ({index}: {index: number}) => (<div className='px-4'>{clients[index].name}</div>);
 
-  React.useEffect(() => {
-    if (index < clients.length) {
-      setArrayIndex(index);
-    } else if (index % 4 === 0) {
-      setArrayIndex(0);
-    } else if (index % 3 === 0) {
-      setArrayIndex(3);
-    } else if (index % 2 === 0) {
-      setArrayIndex(2);
-    } else {
-      setArrayIndex(1);
-    }
-  },[]);
+const findNonNullValueIndex = (array: any[]): number =>  {
+	let index = 0;
+	const {length} = array;
+	for (index = 0; index < length; index++) {
+		if (array[index] !== null) {
+			break;
+		}
+	}
 
-  return <div className="px-4">{clients[arrayIndex].name}</div>
+	return index;
 };
-
+	
 const ClientListMarquee = () => {
-  return <Ticker>
-		{({ index }) => (
-			<>
-				<Client index={index} />
-			</>
-		)}
-  </Ticker>;
+	const [clientArray, setClientArray] = React.useState((new Array(clients.length)).fill(null));
+
+	const setCurrentClient = (currentIndex: number): number => {
+		let resultValue = 0;
+		if (currentIndex === 0) {
+			const resultArray = [...clientArray];
+			resultArray[0] = currentIndex;
+			setClientArray(resultArray);
+			resultValue = 0;
+		} else {
+			const size = clientArray.length;
+			const resultArray = (new Array(clientArray.length)).fill(null);
+
+			const index = findNonNullValueIndex(clientArray);
+			if (index === (size - 1)) {
+				resultArray[0] = currentIndex;
+				resultValue = 0;
+			} else {
+				resultArray[index + 1] = currentIndex;
+				resultValue = index + 1;
+			}
+
+			setClientArray(resultArray);
+		}
+
+		return resultValue;
+	};
+
+	return <Ticker>
+		{({ index }) => {
+			const currentIndex = setCurrentClient(index);
+			return <>
+				<Client index={currentIndex} />
+			</>;
+		}}
+	</Ticker>;
 };
 
 export default ClientListMarquee;
