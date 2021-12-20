@@ -6,13 +6,15 @@ interface Props {
   title?: string;
 }
 
-const Meta = ({ title }: Props) => {
-  return (
-    <Head>
-      <title>Eaglestack | {title}</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-  );
+const Meta = ({ title }: Props) => (
+	<Head>
+		<title>Eaglestack | {title}</title>
+		<link rel='icon' href='/favicon.ico' />
+	</Head>
+);
+
+Meta.defaultProps = {
+	title: 'Software development'
 };
 
 export default Meta;

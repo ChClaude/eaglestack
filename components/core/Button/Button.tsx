@@ -69,120 +69,136 @@ type ButtonProps<E extends React.ElementType> =
  * This method switches between classes required for different button variant (contained or outlined) and styles (e.g: primary, secondary, etc...).
  * */
 const switchButtonClassesVariant = (
-  key: string,
-  variant: 'contained' | 'outlined',
+	key: string,
+	variant: 'contained' | 'outlined',
 ) => {
-  if (variant === 'outlined') {
-    switch (key) {
-      case 'primary':
-        return ' text-primary hover:bg-primary';
-      case 'secondary':
-        return ' text-secondary hover:bg-secondary';
-      case 'light':
-        return ' text-light hover:bg-light hover:text-dark';
-      case 'dark':
-        return ' text-dark hover:bg-dark';
-    }
-  } else if (variant === 'contained') {
-    switch (key) {
-      case 'primary':
-        return ' bg-primary text-white';
-      case 'secondary':
-        return ' bg-secondary text-white';
-      case 'light':
-        return ' bg-light text-dark';
-      case 'dark':
-        return ' bg-dark text-white';
-    }
-  }
+	let result = '';
+	if (variant === 'outlined') {
+		switch (key) {
+			case 'primary':
+				result = ' text-primary hover:bg-primary';
+				break;
+			case 'secondary':
+				result = ' text-secondary hover:bg-secondary';
+				break;
+			case 'light':
+				result = ' text-light hover:bg-light hover:text-dark';
+				break;
+			case 'dark':
+				result = ' text-dark hover:bg-dark';
+				break;
+			default:
+				result = '';
+		}
+	} else if (variant === 'contained') {
+		switch (key) {
+			case 'primary':
+				result = ' bg-primary text-white';
+				break;
+			case 'secondary':
+				result = ' bg-secondary text-white';
+				break;
+			case 'light':
+				result = ' bg-light text-dark';
+				break;
+			case 'dark':
+				result = ' bg-dark text-white';
+				break;
+			default:
+				result = '';
+		}
+	}
+	
+	return result;
 };
 
 const createClassNames = (
-  classes: { [key: string]: boolean },
-  variant: 'contained' | 'outlined' | undefined,
+	classes: { [key: string]: boolean },
+	variant: 'contained' | 'outlined' | undefined,
 ): string => {
-  let className = 'relative py-3 px-9 rounded-md focus:outline-none';
+	let className = 'relative py-3 px-9 rounded-md focus:outline-none';
 
-  for (const [key, value] of Object.entries(classes)) {
-    if (value) {
-      className += switchButtonClassesVariant(key, variant);
-    }
-  }
+	// eslint-disable-next-line no-restricted-syntax
+	for (const [key, value] of Object.entries(classes)) {
+		if (value) {
+			className += switchButtonClassesVariant(key, variant);
+		}
+	}
 
-  return className.trim();
+	return className.trim();
 };
 
 const defaultElement = 'button';
 
+const RippleCircle = ({ top, left }: { top: number; left: number }) => <span className={s.circle} style={{
+	top: `${top}px`,
+	left: `${left}px`,
+}} />;
+
 // TODO: This is not rendering as expect in production
 const Button = <E extends React.ElementType = typeof defaultElement>({
-                                                                       children,
-                                                                       primary = false,
-                                                                       secondary = false,
-                                                                       dark = false,
-                                                                       light = false,
-                                                                       variant,
-                                                                       as,
-                                                                       className,
-                                                                       onClick,
-                                                                     }: ButtonProps<E>) => {
-  const styles = createClassNames(
-    { primary, secondary, dark, light },
-    variant,
-  );
-  const TagName = as || defaultElement;
-  const [showRippleCircle, setShowRippleCircle] = React.useState(false);
-  const [top, setTop] = React.useState(0);
-  const [left, setLeft] = React.useState(0);
+	children,
+	primary = false,
+	secondary = false,
+	dark = false,
+	light = false,
+	variant,
+	as,
+	className,
+	onClick,
+}: ButtonProps<E>) => {
+	const styles = createClassNames(
+		{ primary, secondary, dark, light },
+		variant,
+	);
+	const TagName = as || defaultElement;
+	const [showRippleCircle, setShowRippleCircle] = React.useState(false);
+	const [top, setTop] = React.useState(0);
+	const [left, setLeft] = React.useState(0);
 
-  const runRippleEffect = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    const x = event.pageX;
-    const y = event.pageY;
+	const runRippleEffect = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+		const x = event.pageX;
+		const y = event.pageY;
 
-    // @ts-ignore
+		// @ts-ignore
 		const buttonTop = event.target.offsetTop;
 		// @ts-ignore
 		const buttonLeft = event.target.offsetLeft;
 
 
-    const xInside = x - buttonLeft;
-    const yInside = y - buttonTop;
+		const xInside = x - buttonLeft;
+		const yInside = y - buttonTop;
 
-    const circle = document.createElement('span');
-    circle.classList.add(s.circle);
-    circle.style.top = yInside + 'px';
-    circle.style.left = xInside + 'px';
+		const circle = document.createElement('span');
+		circle.classList.add(s.circle);
+		circle.style.top = `${yInside  }px`;
+		circle.style.left = `${xInside  }px`;
 
-    setTop(yInside);
-    setLeft(xInside);
+		setTop(yInside);
+		setLeft(xInside);
 
-    if (!showRippleCircle) {
-      setShowRippleCircle(true);
+		if (!showRippleCircle) {
+			setShowRippleCircle(true);
 
-      setTimeout(() => {
-        setShowRippleCircle(false);
-      }, 500);
-    }
-  };
+			setTimeout(() => {
+				setShowRippleCircle(false);
+			}, 500);
+		}
+	};
 
-  return (
-    <TagName className={cn(styles, className, s.ripple)}
-             onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-               runRippleEffect(event);
-               if (onClick) {
-                 onClick(event);
-               }
-             }}>
-      {children}
-      {showRippleCircle && <RippleCircle top={top} left={left} />}
-    </TagName>
-  );
+	return (
+		<TagName className={cn(styles, className, s.ripple)}
+			onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+				runRippleEffect(event);
+				if (onClick) {
+					onClick(event);
+				}
+			}}>
+			{children}
+			{showRippleCircle && <RippleCircle top={top} left={left} />}
+		</TagName>
+	);
 };
-
-const RippleCircle = ({ top, left }: { top: number; left: number }) => <span className={s.circle} style={{
-  top: `${top}px`,
-  left: `${left}px`,
-}} />;
 
 
 export default Button;

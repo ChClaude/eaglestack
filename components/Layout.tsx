@@ -7,15 +7,13 @@ type LayoutProp = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProp) => {
-  return (
-    <>
-      <Meta title="We build modern and reliable software solutions" />
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
-  );
-};
+const Layout = ({ children }: LayoutProp) => (
+	<>
+		<Meta title="We build modern and reliable software solutions" />
+		<Header />
+		<main>{children}</main>
+		<Footer />
+	</>
+);
 
 export default Layout;

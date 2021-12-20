@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Ticker from 'react-ticker';
-import { number } from 'prop-types';
 
 
 const clients: { id: number, name: string, image: string }[] = [
@@ -13,7 +12,7 @@ const clients: { id: number, name: string, image: string }[] = [
 const Client = ({index}: {index: number}) => (<div className='px-4'>{clients[index].name}</div>);
 
 const findNonNullValueIndex = (array: any[]): number =>  {
-	let index = 0;
+	let index: number;
 	const {length} = array;
 	for (index = 0; index < length; index++) {
 		if (array[index] !== null) {
@@ -28,7 +27,7 @@ const ClientListMarquee = () => {
 	const [clientArray, setClientArray] = React.useState((new Array(clients.length)).fill(null));
 
 	const setCurrentClient = (currentIndex: number): number => {
-		let resultValue = 0;
+		let resultValue: number;
 		if (currentIndex === 0) {
 			const resultArray = [...clientArray];
 			resultArray[0] = currentIndex;

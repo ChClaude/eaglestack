@@ -1,9 +1,7 @@
 import * as React from 'react';
   
-const SVG = () => {
-	return <>
+const SVG = () => <>
 	  <img className="w-full h-12" src="/sectionextension.svg" alt=""/>
-	</>
-};
+</>;
 
 export default SVG;
