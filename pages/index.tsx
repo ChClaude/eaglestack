@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import EcommerceSite from '@/components/EcommerceSite/EcommerceSite';
 import Button from '@/components/core/Button';
 import Layout from '@/components/Layout';
 import SVG from '@/components/SVG';
-import ClientListMarquee from '@/components/ClientListMarquee';
+import ClientList from '@/components/ClientList';
 
-library.add(fab, faPhone, faMapMarkerAlt);
+library.add(fab, faPhone, faMapMarkerAlt, faHeart);
 
 const Home = () => (
 	<Layout>
@@ -62,7 +62,9 @@ const Home = () => (
 		</section>
 		<section className='md:px-44 md:py-20'>
 			<h4 className='text-center mb-8'>Our Clients</h4>
-			<ClientListMarquee />
+			<div className='flex justify-center'>
+				<ClientList />
+			</div>
 		</section>
 	</Layout>
 );
