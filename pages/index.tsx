@@ -60,7 +60,7 @@ const Home = () => (
 			</div>
 			<SVG />
 		</section>
-		<section className='md:px-44 md:py-20'>
+		<section className='py-12 md:px-44'>
 			<h4 className='text-center mb-8'>Our Clients</h4>
 			<div className='flex justify-center'>
 				<ClientList />
