@@ -66,7 +66,7 @@ const Footer = () => (
 		</div>
 
 		<div
-			className='flex py-7 px-44 px-2 flex-col items-center border-t-2 border-solid border-gray-300 md:items-start md:justify-between md:flex-row'>
+			className='flex py-7 px-44 flex-col items-center border-t-2 border-solid border-gray-300 md:items-start md:justify-between md:flex-row'>
 			<p className="text-sm"><FontAwesomeIcon
 				icon='heart'
 				className='text-base text-red-500'
