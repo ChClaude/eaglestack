@@ -55,9 +55,7 @@ const ClientListMarquee = () => {
 	return <Ticker>
 		{({ index }) => {
 			const currentIndex = setCurrentClient(index);
-			return <>
-				<Client index={currentIndex} />
-			</>;
+			return <Client index={currentIndex} />;
 		}}
 	</Ticker>;
 };
