@@ -5,7 +5,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import EcommerceSite from '@/components/EcommerceSite/EcommerceSite';
 import Button from '@/components/core/Button';
-import Layout from '@/components/Layout';
+import Layout from '@/components/Layout/Layout';
 import SVG from '@/components/SVG';
 import ClientList from '@/components/ClientList';
 

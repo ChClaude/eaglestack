@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/Header.module.scss';
+import styles from './Header.module.scss';
 
 const Logo = () => (
 	<div className='flex w-36 overflow-hidden'>
@@ -13,7 +13,7 @@ const Logo = () => (
 			className='w-auto'
 			objectFit='cover'
 		/>
-		<span className='text-xl font-black '>Eaglestack</span>
+		<span className='text-xl font-black'>Eaglestack</span>
 	</div>
 );
 
